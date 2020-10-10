@@ -9,7 +9,11 @@
 import UIKit
 
 class DocumentBrowserViewController: UIDocumentBrowserViewController, UIDocumentBrowserViewControllerDelegate {
-    
+
+    private lazy var documentTransitionCoordinator: DocumentTransitionCoordinator = .init()
+
+    // MARK: - UIViewController
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -18,10 +22,10 @@ class DocumentBrowserViewController: UIDocumentBrowserViewController, UIDocument
         allowsDocumentCreation = true
         allowsPickingMultipleItems = false
     }
-    
-    
-    // MARK: UIDocumentBrowserViewControllerDelegate
-    
+
+
+    // MARK: - UIDocumentBrowserViewControllerDelegate
+
     func documentBrowser(_ controller: UIDocumentBrowserViewController, didRequestDocumentCreationWithHandler importHandler: @escaping (URL?, UIDocumentBrowserViewController.ImportMode) -> Void) {
 
         do {
@@ -81,14 +85,16 @@ class DocumentBrowserViewController: UIDocumentBrowserViewController, UIDocument
     // MARK: Document Presentation
     
     func presentDocument(at documentURL: URL) {
-        
+        self.documentTransitionCoordinator.registerTransition(from: self, forURL: documentURL)
+
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
         let documentViewController = storyBoard.instantiateViewController(withIdentifier: "DocumentViewController") as! DocumentViewController
         documentViewController.document = Document(fileURL: documentURL)
-        documentViewController.modalPresentationStyle = .overFullScreen
+        documentViewController.transitioningDelegate = self.documentTransitionCoordinator
+        documentViewController.modalPresentationCapturesStatusBarAppearance = true
+        documentViewController.modalPresentationStyle = .overFullScreen // .overFullScreen causes HW keyboard input not being passed to the VC after switching apps
 //        documentViewController.modalPresentationStyle = .fullScreen // If we use .fullScreen, the transition to and from open document is broken
-        
-        present(documentViewController, animated: true, completion: nil)
+
+        self.present(documentViewController, animated: true)
     }
 }
-
