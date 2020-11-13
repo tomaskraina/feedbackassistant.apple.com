@@ -15,5 +15,12 @@ If an app is using UIDocumentBrowserViewController in a "Multi-Windows" setup on
 ## Actual results
 `UIWindow` is successfully removed on `SceneDelegate.sceneDidDisconnect(_:)` but `UIDocumentBrowserViewController` which assigned as `rootViewController` keeps handing in memory, together with its view controller hierachy (e.g. `childen` or `presentedViewController`)
 
+![Screen recording showing the steps to reproduce the bug](https://github.com/tomaskraina/feedbackassistant.apple.com/blob/master/UIDocumentBrowserUISceneMemoryLeak/UIDocumentBrowser-memory-leak.gif?raw=true)
+
+### Object Graphs
+
+![Object Graph of visible UIDocumentBrowserViewController](https://github.com/tomaskraina/feedbackassistant.apple.com/blob/master/UIDocumentBrowserUISceneMemoryLeak/UIDocumentBrowser.png?raw=true)
+![Object Graph of UIDocumentBrowserViewController that's supposed to be released](https://github.com/tomaskraina/feedbackassistant.apple.com/blob/master/UIDocumentBrowserUISceneMemoryLeak/UIDocumentBrowser-memory-leak.png?raw=true)
+
 ### Footnote
 * It is important to remove the first opened app window, not the one that was added by tapping (+) otherwise the whole app gets killed
