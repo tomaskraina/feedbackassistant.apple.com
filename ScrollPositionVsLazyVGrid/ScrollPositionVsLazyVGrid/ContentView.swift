@@ -53,7 +53,7 @@ struct ContentView: View {
             .padding()
         }
         #if os(macOS)
-         .frame(width: 320, height: 480, alignment: .center)
+        .frame(width: 320, height: 480, alignment: .center)
         #endif
     }
 }
@@ -120,20 +120,6 @@ private func makeSections() -> [ContentView.SectionInfo] {
         )
     }
     .sorted(by: { $0.index < $1.index })
-}
-
-// MARK: - View+if
-
-extension View {
-
-    @ViewBuilder
-    func `if`<Content: View>(condition: Bool, @ViewBuilder view: (Self) -> Content) -> some View {
-        if condition {
-            view(self)
-        } else {
-            self
-        }
-    }
 }
 
 // MARK: - Preview
