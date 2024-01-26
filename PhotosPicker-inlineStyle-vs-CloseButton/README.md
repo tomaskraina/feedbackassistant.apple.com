@@ -41,6 +41,6 @@ SwiftUI provides DismissAction via the Environment that can be used to dismiss p
 ### Screenshot 1 - Nice looking PhotosPicker but on functional close button
 <img width="1190" alt="Screenshot 1 - Nice looking PhotosPicker but on functional close button" src="https://github.com/tomaskraina/feedbackassistant.apple.com/assets/198316/ea8c21d6-3096-4849-a6f5-7343a9692ce9">
 
-### Screenshot 2 - Excesive navigation bar and clipped side bar
-![Screenshot 2 - Excesive navigation bar and clipped side bar](https://github.com/tomaskraina/feedbackassistant.apple.com/assets/198316/f0c45cd6-3d4d-4d66-b8be-a66af64b8b37)
+### Screenshot 2 - Excessive navigation bar and clipped side bar
+![Screenshot 2 - Excessive navigation bar and clipped side bar](https://github.com/tomaskraina/feedbackassistant.apple.com/assets/198316/f0c45cd6-3d4d-4d66-b8be-a66af64b8b37)
 
