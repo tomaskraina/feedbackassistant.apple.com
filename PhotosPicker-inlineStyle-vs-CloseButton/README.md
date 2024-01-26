@@ -29,9 +29,18 @@ We tried to remove the Close button with .photosPickerDisabledCapabilities(.sele
 ## How we expect this to work
 SwiftUI provides DismissAction via the Environment that can be used to dismiss presented sheet. We would expect Cancel button in PhotosPicker to invoke the DismissAction to close the presented sheet.
 
-### Versions
+## Versions
 
 - Xcode Version 15.2 (15C500b)
 - visionOS 1.0 (21N305)
 - Version 15.2 (1019)
 - macOS 14.2.1 (23C71)
+
+## Screenshots 
+
+### Screenshot 1 - Nice looking PhotosPicker but on functional close button
+<img width="1190" alt="Screenshot 1 - Nice looking PhotosPicker but on functional close button" src="https://github.com/tomaskraina/feedbackassistant.apple.com/assets/198316/ea8c21d6-3096-4849-a6f5-7343a9692ce9">
+
+### Screenshot 2 - Excesive navigation bar and clipped side bar
+![Screenshot 2 - Excesive navigation bar and clipped side bar](https://github.com/tomaskraina/feedbackassistant.apple.com/assets/198316/f0c45cd6-3d4d-4d66-b8be-a66af64b8b37)
+
