@@ -10,8 +10,9 @@ XcodeGen installation are needed to run it. Minimum deployment target: iOS 18.
 
 ## Demonstration
 
-[Watch the short, silent, annotated recording](media/preferred-color-scheme-bug.mp4).
 The recording uses the iPhone 18 Pro Simulator on iOS 27.2 (24B114).
+
+media/preferred-color-scheme-bug.mp4
 
 ## Run and reproduce
 
