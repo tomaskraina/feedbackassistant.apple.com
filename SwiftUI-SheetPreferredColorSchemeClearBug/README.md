@@ -1,5 +1,7 @@
 # SwiftUI sheet stays dark after clearing `preferredColorScheme`
 
+Reported to Apple as **[FB25273283](docs/APPLE-FEEDBACK.md)**.
+
 Changing an open sheet’s `.preferredColorScheme` from `.dark` to `nil` leaves
 its content in Dark Mode even when the system and presenting root are light.
 Dismissing and reopening the sheet with `nil` selected restores Light Mode.
@@ -68,7 +70,7 @@ appearance and never supply fallback values or apply overrides.
 
 ## Apple Feedback and sharing
 
-- [Report draft](docs/APPLE-FEEDBACK.md), ready to copy into Feedback Assistant.
+- [Apple Feedback report: FB25273283](docs/APPLE-FEEDBACK.md), submitted to Apple.
 - [Recording details and transcript](media/README.md).
 - [Social post draft](docs/SHARING.md).
 - Create a clean attachment with `python3 scripts/package-sample.py`; the ZIP is

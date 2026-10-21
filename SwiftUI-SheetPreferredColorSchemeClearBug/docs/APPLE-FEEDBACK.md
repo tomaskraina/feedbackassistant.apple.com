@@ -1,6 +1,6 @@
 # SwiftUI: clearing preferredColorScheme on an open sheet retains the previous appearance
 
-Status: report draft; not submitted. No Feedback ID has been assigned.
+Status: submitted to Apple as **FB25273283**.
 
 ## Summary
 
@@ -71,6 +71,6 @@ controls remain available but are not prerequisites for this reproduction.
   outside the app image; no appearance simulation or reconstructed UI.
 
 Create the ZIP using `python3 scripts/package-sample.py` in the sample directory.
-When submitting, attach the video separately as well for convenient playback.
+The video can also be attached separately for convenient playback.
 A sysdiagnose from the failing environment can be attached separately if needed;
 none was captured in this session.

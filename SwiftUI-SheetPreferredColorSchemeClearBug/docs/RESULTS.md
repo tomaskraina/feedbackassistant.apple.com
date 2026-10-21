@@ -1,5 +1,7 @@
 # Reproduction results — 2026-10-21
 
+Apple Feedback: **[FB25273283](APPLE-FEEDBACK.md)** (submitted).
+
 ## Confirmed case
 
 System appearance Light; presenting-root preference nil; ordinary unconditional
