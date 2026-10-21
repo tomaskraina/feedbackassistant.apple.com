@@ -1,0 +1,32 @@
+name: SheetPreferredColorSchemeClearBug
+options:
+  deploymentTarget:
+    iOS: '18.0'
+settings:
+  base:
+    SWIFT_VERSION: '6.0'
+    SWIFT_STRICT_CONCURRENCY: complete
+    SWIFT_DEFAULT_ACTOR_ISOLATION: MainActor
+    SWIFT_APPROACHABLE_CONCURRENCY: YES
+targets:
+  SheetPreferredColorSchemeClearBug:
+    type: application
+    platform: iOS
+    sources: [Sources]
+    settings:
+      base:
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        PRODUCT_BUNDLE_IDENTIFIER: com.example.SheetPreferredColorSchemeClearBug
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_CFBundleDisplayName: SheetPreferredColorSchemeClearBug
+        INFOPLIST_KEY_UILaunchScreen_Generation: YES
+        INFOPLIST_KEY_UIApplicationSceneManifest_Generation: YES
+        TARGETED_DEVICE_FAMILY: '1,2'
+        CODE_SIGN_STYLE: Automatic
+schemes:
+  SheetPreferredColorSchemeClearBug:
+    build:
+      targets:
+        SheetPreferredColorSchemeClearBug: all
+    run:
+      config: Debug
