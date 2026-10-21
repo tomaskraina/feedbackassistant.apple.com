@@ -12,7 +12,7 @@ XcodeGen installation are needed to run it. Minimum deployment target: iOS 18.
 
 The recording uses the iPhone 18 Pro Simulator on iOS 27.2 (24B114).
 
-https://raw.githubusercontent.com/tomaskraina/feedbackassistant.apple.com/refs/heads/master/SwiftUI-SheetPreferredColorSchemeClearBug/media/preferred-color-scheme-bug.mp4
+https://github.com/user-attachments/assets/70f4be86-1105-40f4-8b3c-2f84b62aea54
 
 ## Run and reproduce
 
